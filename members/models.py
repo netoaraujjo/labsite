@@ -5,7 +5,8 @@ from django.db import models
 class Member(models.Model):
     MEMBER_CATEGORIES = (
         ('1', 'Orientador'),
-        ('2', 'Estudante'),
+        ('2', 'Mestrando'),
+        ('3', 'Graduando'),
     )
 
     category = models.CharField(
@@ -19,7 +20,7 @@ class Member(models.Model):
     )
     email = models.EmailField(verbose_name='e-mail')
     lattes = models.URLField(verbose_name='currículo Lattes')
-    avatar = models.FileField(upload_to='uploads/')
+    avatar = models.FileField(upload_to='uploads/pictures/')
 
     def __str__(self):
         return self.name
