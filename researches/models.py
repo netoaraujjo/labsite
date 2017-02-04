@@ -48,3 +48,35 @@ class Project(models.Model):
 
     class Meta:
         verbose_name='projeto'
+
+
+class Publication(models.Model):
+    title = models.CharField(
+        max_length=200,
+        verbose_name='título',
+    )
+    publication_local=models.CharField(
+        max_length=200,
+        verbose_name='local de publicação',
+        help_text='Congresso/Periódico onde o artigo foi publicado.',
+    )
+    publication_url = models.URLField(
+        verbose_name='link da publicação',
+    )
+    authors = models.ManyToManyField(
+        Member,
+        related_name='publications',
+        verbose_name='autores',
+        help_text='Autores vinculados ao laboratório.',
+    )
+    publication_file=models.FileField(
+        upload_to='uploads/publications/',
+        verbose_name='',
+    )
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name='publicação'
+        verbose_name_plural='Publicações'
