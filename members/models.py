@@ -20,10 +20,30 @@ class Member(models.Model):
     )
     email = models.EmailField(verbose_name='e-mail')
     lattes = models.URLField(verbose_name='currículo Lattes')
-    avatar = models.FileField(upload_to='uploads/pictures/')
+    avatar = models.ImageField(upload_to='photos')
 
     def __str__(self):
         return self.name
 
     class Meta:
         verbose_name='Membro'
+
+
+class Location(models.Model):
+    latitude = models.CharField(max_length=100)
+    longitude = models.CharField(max_length=100)
+    google_maps_api_key=models.CharField(
+        max_length=200,
+        verbose_name='API Key do Google Maps'
+    )
+    address = models.TextField(
+        max_length=200,
+        verbose_name='endereço',
+    )
+
+    def __str__(self):
+        return self.address
+
+    class Meta:
+        verbose_name='localização'
+        verbose_name_plural='localizações'

@@ -32,7 +32,6 @@ class Project(models.Model):
         ResearchLine,
         on_delete=models.CASCADE,
         verbose_name='linha de pesquisa',
-        default=1,
     )
     project_title = models.CharField(
         max_length=200,
@@ -70,7 +69,7 @@ class Publication(models.Model):
         help_text='Autores vinculados ao laboratório.',
     )
     publication_file=models.FileField(
-        upload_to='uploads/publications/',
+        upload_to='publications',
         verbose_name='',
     )
 
