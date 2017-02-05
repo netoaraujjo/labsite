@@ -4,13 +4,13 @@ from django.db import models
 # Create your models here.
 class Member(models.Model):
     MEMBER_CATEGORIES = (
-        ('1', 'Orientador'),
-        ('2', 'Mestrando'),
-        ('3', 'Graduando'),
+        ('Orientador', 'Orientador'),
+        ('Mestrando', 'Mestrando'),
+        ('Graduando', 'Graduando'),
     )
 
     category = models.CharField(
-        max_length=1,
+        max_length=30,
         choices=MEMBER_CATEGORIES,
         verbose_name='categoria',
     )

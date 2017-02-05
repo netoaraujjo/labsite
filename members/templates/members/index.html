@@ -3,5 +3,13 @@
 {% block title %}Membros do laboratório{% endblock %}
 
 {% block content %}
-  <p>Olá mundo!</p>
+<h2>Membros do laboratório</h2>
+
+{% for member in members %}
+  <img src="{{ member.avatar }}" />
+  <h4>{{ member.name }} ({{ member.category }})</h4>
+  <p>{{ member.email }}</p>
+  <p>{{ member.lattes }}</p>
+{% endfor %}
+
 {% endblock %}

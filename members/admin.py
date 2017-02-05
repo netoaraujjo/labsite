@@ -3,9 +3,10 @@ from django.contrib import admin
 from .models import Member, Location
 
 class MemberAdmin(admin.ModelAdmin):
-    ordering=['category']
+    ordering=['-category']
     list_filter = ['category']
     search_fields = ['name']
+    list_display = ['name', 'email', 'category']
 
 class LocationAdmin(admin.ModelAdmin):
     pass
