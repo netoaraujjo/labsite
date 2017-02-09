@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # My apps
     'members.apps.MembersConfig',
     'researches.apps.ResearchesConfig',
+    'home.apps.HomeConfig',
 ]
 
 MIDDLEWARE = [
@@ -128,5 +129,5 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'sitestatic')
+    os.path.join(BASE_DIR, 'sitestatic'),
 ]
