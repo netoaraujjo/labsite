@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+section#members {
+  background: rgb(43, 128, 170);
+  color: rgb(255, 255, 255);
+  padding: 2%;
+}
+
+#members-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.member {
+  width: 25%;
+  text-align: center;
+  margin-top: 3%;
+}
+
+.member img {
+  border-radius: 50%;
+  border: 0.2em solid rgb(255, 255, 255);
+  margin-bottom: 2%;
+}
+
+.member a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.member p {
+  font-size: 0.8em;
+}

@@ -5,8 +5,8 @@
 <head>
 <meta charset="utf-8">
 <title>{% block title %}{% endblock %}</title>
-{% load static %}
 <link rel="stylesheet" type="text/css" href="{% static "css/base.css" %}" />
+<link rel="stylesheet" type="text/css" href="{% static "css/members.css" %}" />
 
 </head>
 
@@ -16,7 +16,7 @@
 
 <header>
   <div id="logo">
-    <a href="#"><h1>LOGO</h1></a>
+    <a href="{% url 'home_index' %}"><img src="{% static "img/default.png" %}" alt="Logo" /></a>
   </div>
 
   <nav>
@@ -31,8 +31,9 @@
   </nav>
 </header>
 
-{% block content %}{% endblock %}
-
+<div id="content">
+  {% block content %}{% endblock %}
+</div>
 <footer>
 </footer>
 

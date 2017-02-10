@@ -3,13 +3,24 @@
 {% block title %}Membros do laboratório{% endblock %}
 
 {% block content %}
+
+<section id="members">
+
 <h2>Membros do laboratório</h2>
 
+<div id="members-list">
+
 {% for member in members %}
-  <img src="{{ member.avatar }}" />
-  <h4>{{ member.name }} ({{ member.category }})</h4>
-  <p>{{ member.email }}</p>
-  <p>{{ member.lattes }}</p>
+  <div class="member">
+    <img src="{{ member.avatar.url }}" width="150" height="150" />
+    <h4><a href="{{ member.lattes }}" title="Clique para ver o Lattes">{{ member.name }}</a></h4>
+    <p>({{ member.category }})</p>
+    {# <p><a href="mailto:{{ member.email }}">{{ member.email }}</a></p>#}
+  </div>
 {% endfor %}
+
+</div>
+
+</section>
 
 {% endblock %}
