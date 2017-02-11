@@ -47,26 +47,3 @@ class Location(models.Model):
     class Meta:
         verbose_name='localização'
         verbose_name_plural='localizações'
-
-
-class Post(models.Model):
-    title = models.CharField(
-        max_length=200,
-        verbose_name='título',
-    )
-    text = models.TextField(
-        verbose_name='texto',
-    )
-    image = models.ImageField(
-        upload_to='posts',
-        verbose_name='imagem',
-    )
-    pub_date = models.DateTimeField(
-        verbose_name='data de publicação',
-    )
-
-    def __str__(self):
-        return self.title
-
-    class Meta():
-        verbose_name = 'notícia'
