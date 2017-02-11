@@ -1,0 +1,31 @@
+<a name="location"></a>
+<section id="location">
+  <div id="map">
+  </div>
+
+  <div id="address">
+    {{ location.address }}
+  </div>
+</section>
+
+
+<script type="text/javascript">
+    function initMap() {
+      var myLatLng = {lat: {{ location.latitude }}, lng: {{ location.longitude }}};
+
+      var map = new google.maps.Map(document.getElementById('map'), {
+        center: myLatLng,
+        zoom: 15
+      });
+
+      var marker = new google.maps.Marker({
+        position: {lat: {{ location.latitude }}, lng: {{ location.longitude }}},
+        map: map,
+        title: '{{ about.lab_name }}',
+      });
+
+    }
+</script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key={{ location.google_maps_api_key }}&callback=initMap">
+</script>

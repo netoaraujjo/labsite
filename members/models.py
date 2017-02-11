@@ -42,7 +42,7 @@ class Location(models.Model):
     )
 
     def __str__(self):
-        return self.address
+        return ('%s,%s') % (self.latitude, self.longitude)
 
     class Meta:
         verbose_name='localização'

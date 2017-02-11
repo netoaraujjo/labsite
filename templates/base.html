@@ -9,7 +9,9 @@
 <link rel="stylesheet" type="text/css" href="{% static "css/base.css" %}" />
 <link rel="stylesheet" type="text/css" href="{% static "css/members.css" %}" />
 <link rel="stylesheet" type="text/css" href="{% static "css/research_lines.css" %}" />
+<link rel="stylesheet" type="text/css" href="{% static "css/publications_home.css" %}" />
 <link rel="stylesheet" type="text/css" href="{% static "css/publications.css" %}" />
+<link rel="stylesheet" type="text/css" href="{% static "css/location.css" %}" />
 
 
 </head>
@@ -26,10 +28,10 @@
   <nav>
     <ul>
       <li><a href="{% url 'home' %}">Sobre</a></li>
-      <li><a href="">Membros</a></li>
-      <li><a href="">Linhas de pesquisa</a></li>
-      <li><a href="{% url 'publications_index' %}">Publicações</a></li>
-      <li><a href="">Localização</a></li>
+      <li><a href="#members">Membros</a></li>
+      <li><a href="#research_lines">Linhas de pesquisa</a></li>
+      <li><a href="#publications">Publicações</a></li>
+      <li><a href="#location">Localização</a></li>
     </ul>
   </nav>
 </header>

@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+section#location {
+  background: rgb(0, 0, 0);
+  padding: 2%;
+  color: rgb(255, 255, 255);
+  height: 100%;
+}
+
+#map {
+  height: 25em;
+}
+
+#address {
+  margin-top: 3%;
+  text-align: center;
+}

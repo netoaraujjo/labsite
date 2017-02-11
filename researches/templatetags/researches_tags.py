@@ -1,5 +1,5 @@
 from django import template
-from researches.models import ResearchLine
+from researches.models import ResearchLine, Publication
 
 register = template.Library()
 

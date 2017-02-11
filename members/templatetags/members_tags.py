@@ -1,5 +1,5 @@
 from django import template
-from members.models import Member, AboutLab
+from members.models import Member, AboutLab, Location
 
 register = template.Library()
 
@@ -12,3 +12,9 @@ def show_members():
 def show_about():
     about = AboutLab.objects.get(id=1)
     return {'about': about}
+
+@register.inclusion_tag('members/location.html')
+def show_location():
+    location = Location.objects.get(id=1)
+    about = AboutLab.objects.get(id=1)
+    return {'location': location, 'about': about}
