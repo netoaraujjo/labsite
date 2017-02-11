@@ -5,6 +5,7 @@
 <head>
 <meta charset="utf-8">
 <title>{% block title %}{% endblock %}</title>
+<link rel="stylesheet" type="text/css" href="{% static "css/about.css" %}" />
 <link rel="stylesheet" type="text/css" href="{% static "css/base.css" %}" />
 <link rel="stylesheet" type="text/css" href="{% static "css/members.css" %}" />
 <link rel="stylesheet" type="text/css" href="{% static "css/research_lines.css" %}" />
@@ -24,11 +25,11 @@
 
   <nav>
     <ul>
-      <li><a href="{% url 'home' %}">Início</a></li>
-      <li><a href="">Notícias</a></li>
+      <li><a href="{% url 'home' %}">Sobre</a></li>
       <li><a href="">Membros</a></li>
       <li><a href="">Linhas de pesquisa</a></li>
       <li><a href="{% url 'publications_index' %}">Publicações</a></li>
+      <li><a href="">Localização</a></li>
     </ul>
   </nav>
 </header>

@@ -47,3 +47,22 @@ class Location(models.Model):
     class Meta:
         verbose_name='localização'
         verbose_name_plural='localizações'
+
+
+class AboutLab(models.Model):
+    lab_name = models.CharField(
+        max_length=200,
+        verbose_name='nome do laboratório',
+    )
+    about = models.TextField(verbose_name='sobre')
+    image = models.ImageField(
+        upload_to='about',
+        verbose_name='imagem',
+    )
+
+    def __str__(self):
+        return self.lab_name
+
+    class Meta():
+        verbose_name='sobre'
+        verbose_name_plural='sobre'

@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+section#about {
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  padding: 2%;
+}
+
+section#about h1 {
+  font-size: 2em;
+  margin-bottom: 3%;
+}
+
+#lab-info {
+  display: flex;
+}
+
+#lab-info-text {
+  width: 60%;
+  margin-right: 10%;
+}
+
+#about-image {
+  width: 30%;
+}
+
+#about-image img {
+  width: 100%;
+}
