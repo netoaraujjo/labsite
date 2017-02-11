@@ -1,15 +1,16 @@
-{% extends "base.html" %}
+<section id="research_lines">
 
-{% block title %}Linhas de pesquisa{% endblock %}
-
-{% block content %}
 <h2>Linhas de pesquisa</h2>
 
+<div id="research-lines-list">
+
 {% for research_line in research_lines %}
-  <h3>{{ research_line.research_line }}</h3>
-  <section class="research_line_description">
-    {{ research_line.description }}
-  </section>
+  <div class="research-line">
+    <img src="{{ research_line.image.url }}" width="150" height="150" />
+    <h4>{{ research_line.research_line }}</h4>
+  </div>
 {% endfor %}
 
-{% endblock %}
+</div>
+
+</section>

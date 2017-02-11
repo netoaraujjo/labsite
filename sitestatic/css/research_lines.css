@@ -1,0 +1,23 @@
+section#research_lines {
+  background: rgb(180, 145, 39);
+  color: rgb(255, 255, 255);
+  padding: 2%;
+}
+
+#research-lines-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.research-line {
+  width: calc(100%/3);
+  text-align: center;
+  margin-top: 3%;
+}
+
+.research-line img {
+  border-radius: 50%;
+  border: 0.2em solid rgb(255, 255, 255);
+  margin-bottom: 2%;
+}
