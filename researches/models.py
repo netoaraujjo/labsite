@@ -22,33 +22,6 @@ class ResearchLine(models.Model):
         verbose_name_plural='linhas de pesquisa'
 
 
-class Project(models.Model):
-    researches = models.ManyToManyField(
-        Member,
-        related_name='projects',
-        verbose_name='Pesquisadores',
-    )
-    research_line = models.ForeignKey(
-        ResearchLine,
-        on_delete=models.CASCADE,
-        verbose_name='linha de pesquisa',
-    )
-    project_title = models.CharField(
-        max_length=200,
-        verbose_name='título',
-    )
-    abstract = models.TextField(
-        max_length=1024,
-        verbose_name='resumo',
-    )
-
-    def __str__(self):
-        return self.project_title
-
-    class Meta:
-        verbose_name='projeto'
-
-
 class Publication(models.Model):
     title = models.CharField(
         max_length=200,

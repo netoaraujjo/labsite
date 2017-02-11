@@ -27,7 +27,6 @@ urlpatterns = [
     # url(r'^members/$', members_views.index, name='members_index'),
     # url(r'^research_lines/$', researches_views.research_lines, name='research_lines_index'),
     url(r'^publications/$', researches_views.publications, name='publications_index'),
-    url(r'^projects/$', researches_views.projects, name='projects_index'),
     url(r'^admin/', admin.site.urls),
 ]
 
