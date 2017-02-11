@@ -7,6 +7,7 @@
 <title>{% block title %}{% endblock %}</title>
 <link rel="stylesheet" type="text/css" href="{% static "css/base.css" %}" />
 <link rel="stylesheet" type="text/css" href="{% static "css/members.css" %}" />
+<link rel="stylesheet" type="text/css" href="{% static "css/publications.css" %}" />
 
 </head>
 
@@ -16,14 +17,15 @@
 
 <header>
   <div id="logo">
-    <a href="{% url 'home_index' %}"><img src="{% static "img/default.png" %}" alt="Logo" /></a>
+    <a href=""><img src="{% static "img/default.png" %}" alt="Logo" /></a>
   </div>
 
   <nav>
     <ul>
-      <li><a href="{% url 'home_index' %}">Sobre</a></li>
-      <li><a href="{% url 'members_index' %}">Membros</a></li>
-      <li><a href="{% url 'research_lines_index' %}">Linhas de pesquisa</a></li>
+      <li><a href="{% url 'home' %}">Início</a></li>
+      <li><a href="">Notícias</a></li>
+      <li><a href="">Membros</a></li>
+      <li><a href="">Linhas de pesquisa</a></li>
       <li><a href="{% url 'publications_index' %}">Publicações</a></li>
       <li><a href="{% url 'projects_index' %}">Projetos</a></li>
       {# <li><a href="">Contato</a></li>#}

@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Member, Location
+from .models import Member, Location, Post
 
 class MemberAdmin(admin.ModelAdmin):
     ordering=['-category']
@@ -11,6 +11,10 @@ class MemberAdmin(admin.ModelAdmin):
 class LocationAdmin(admin.ModelAdmin):
     pass
 
+class PostAdmin(admin.ModelAdmin):
+    pass
+
 # Register your models here.
 admin.site.register(Member, MemberAdmin)
 admin.site.register(Location, LocationAdmin)
+admin.site.register(Post, PostAdmin)

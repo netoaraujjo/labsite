@@ -16,7 +16,6 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
-from home import views as home_views
 from members import views as members_views
 from researches import views as researches_views
 
@@ -24,9 +23,9 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    url(r'^$', home_views.index, name='home_index'),
-    url(r'^members/$', members_views.index, name='members_index'),
-    url(r'^research_lines/$', researches_views.research_lines, name='research_lines_index'),
+    url(r'^$', members_views.home, name='home'),
+    # url(r'^members/$', members_views.index, name='members_index'),
+    # url(r'^research_lines/$', researches_views.research_lines, name='research_lines_index'),
     url(r'^publications/$', researches_views.publications, name='publications_index'),
     url(r'^projects/$', researches_views.projects, name='projects_index'),
     url(r'^admin/', admin.site.urls),

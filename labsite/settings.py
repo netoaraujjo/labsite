@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     # My apps
     'members.apps.MembersConfig',
     'researches.apps.ResearchesConfig',
-    'home.apps.HomeConfig',
 ]
 
 MIDDLEWARE = [

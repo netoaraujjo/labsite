@@ -29,6 +29,10 @@ section#members {
   text-decoration: none;
 }
 
+.member a:hover {
+  text-decoration: underline;
+}
+
 .member p {
   font-size: 0.8em;
 }
