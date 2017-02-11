@@ -13,6 +13,10 @@ class ResearchLine(models.Model):
         max_length=1024,
         verbose_name='descrição',
     )
+    image = models.ImageField(
+        upload_to='research_lines',
+        verbose_name='imagem',
+    )
 
     def __str__(self):
         return self.research_line
