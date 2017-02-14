@@ -3,15 +3,19 @@
 
 <h2>Linhas de pesquisa</h2>
 
+{% if research_lines %}
+
 <div id="research-lines-list">
 
 {% for research_line in research_lines %}
   <div class="research-line">
-    <img src="{{ research_line.image.url }}" width="150" height="150" />
+    <img src="{{ research_line.image.url }}" width="200" height="200" />
     <h4>{{ research_line.research_line }}</h4>
   </div>
 {% endfor %}
 
 </div>
+
+{% endif %}
 
 </section>

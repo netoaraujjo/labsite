@@ -1,6 +1,23 @@
 # -*- coding:utf-8 -*-
 from django.db import models
 
+
+
+
+
+# def update_filename(instance, filename):
+#     path = "upload/path/"
+#     format = instance.userid + instance.transaction_uuid + instance.file_extension
+#     return os.path.join(path, format)
+
+# file = models.FileField(
+#     upload_to=lambda instance, filename: '/'.join(['mymodel', str(instance.pk), filename]),
+# )
+
+
+
+
+
 # Create your models here.
 class Member(models.Model):
     MEMBER_CATEGORIES = (

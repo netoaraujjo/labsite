@@ -1,11 +1,15 @@
 <a name="location"></a>
 <section id="location">
+
   <div id="map">
   </div>
+
 
   <div id="address">
     {{ location.address }}
   </div>
+
+
 </section>
 
 
@@ -21,7 +25,7 @@
       var marker = new google.maps.Marker({
         position: {lat: {{ location.latitude }}, lng: {{ location.longitude }}},
         map: map,
-        title: '{{ about.lab_name }}',
+        title: 'Título do marcador',
       });
 
     }

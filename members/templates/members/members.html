@@ -3,16 +3,20 @@
 
 <h2>Membros do laboratório</h2>
 
+{% if members %}
+
 <div id="members-list">
 
 {% for member in members %}
   <div class="member">
-    <img src="{{ member.avatar.url }}" width="150" height="150" />
+    <img src="{{ member.avatar.url }}" width="200" height="200" />
     <h4><a href="{{ member.lattes }}" title="Clique para ver o Lattes">{{ member.name }}</a></h4>
     <p>({{ member.category }})</p>
   </div>
 {% endfor %}
 
 </div>
+
+{% endif %}
 
 </section>

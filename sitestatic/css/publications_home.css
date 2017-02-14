@@ -1,7 +1,42 @@
 @charset "UTF-8";
 
 section#publications-home {
-  background: #8ebc8e;
+  background: rgb(142, 188, 142);
   color: rgb(255, 255, 255);
-  padding: 2%;
+  padding: 4% 2%;
+}
+
+#pub-images {
+  display: flex;
+  justify-content: center;
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+
+.pub-image {
+  width: calc(100%/3);
+  text-align: center;
+}
+
+.pub-image img {
+  /*width: 75%;*/
+  border-radius: 50%;
+  border: 0.2em solid rgb(255, 255, 255);
+}
+
+section#publications-home p {
+  text-align: center;
+  margin-top: 3%;
+}
+
+section#publications-home a {
+  background: rgb(255, 255, 255);
+  padding: 1% 2%;
+  text-decoration: none;
+  color: rgb(103, 138, 103);
+}
+
+section#publications-home a:hover {
+  background: rgb(103, 138, 103);
+  color: rgb(255, 255, 255);
 }

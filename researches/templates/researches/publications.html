@@ -1,12 +1,39 @@
-{% extends "base.html" %}
 
-{% block title %}Publicações{% endblock %}
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Publicações</title>
+<link rel="stylesheet" type="text/css" href="{% static "css/base.css" %}" />
+<link rel="stylesheet" type="text/css" href="{% static "css/publications.css" %}" />
 
-{% block content %}
+
+</head>
+
+<body>
+
+<div id="border"></div>
+
+<header>
+  <div id="logo">
+    <a href=""><img src="{% static "img/default.png" %}" alt="Logo" /></a>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="{% url 'home' %}">Voltar</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div id="content">
 
 <section id="publications">
 
 <h2>Publicações</h2>
+
+{% if publications %}
 
 <div id="publications-list">
 
@@ -21,6 +48,14 @@
 
 </div>
 
+{% endif %}
+
 </section>
 
-{% endblock %}
+</div>
+<footer>
+</footer>
+
+</body>
+
+</html>

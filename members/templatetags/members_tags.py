@@ -10,11 +10,14 @@ def show_members():
 
 @register.inclusion_tag('members/about.html')
 def show_about():
-    about = AboutLab.objects.get(id=1)
+    about = AboutLab.objects.all()[:1]
+    if len(about) > 0:
+        about = about[0]
     return {'about': about}
 
 @register.inclusion_tag('members/location.html')
 def show_location():
-    location = Location.objects.get(id=1)
-    about = AboutLab.objects.get(id=1)
-    return {'location': location, 'about': about}
+    location = Location.objects.all()[:1]
+    if len(location) > 0:
+        location = location[0]
+    return {'location': location}

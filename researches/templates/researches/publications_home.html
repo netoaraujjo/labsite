@@ -1,6 +1,19 @@
+{% load static %}
 <a name="publications"></a>
 <section id="publications-home">
 
 <h2>Publicações</h2>
-
+<div id="pub-images">
+  <div class="pub-image">
+    <img src="{% static "img/pub1.png" %}" alt="" width="200" height="200" />
+  </div>
+  <div class="pub-image">
+    <img src="{% static "img/pub2.png" %}" alt="" width="200" height="200" />
+  </div>
+  <div class="pub-image">
+    <img src="{% static "img/pub3.png" %}" alt="" width="200" height="200" />
+  </div>
+</div>
+<p>Clique no link abaixo e confira a lista completa com todas as nossa publicações!</p>
+<p><a href="{% url "publications_index" %}">Ver publicações</a><p>
 </section>
